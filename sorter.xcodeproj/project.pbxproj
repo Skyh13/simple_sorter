@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1E102B151929B89300B623B9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E102B141929B89300B623B9 /* main.cpp */; };
 		1E102B171929B89300B623B9 /* sorter.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1E102B161929B89300B623B9 /* sorter.1 */; };
+		1E102B221929C2B800B623B9 /* sorter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E102B201929C2B800B623B9 /* sorter.cpp */; };
+		1ED60F951935A8370043E204 /* String.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1ED60F931935A8370043E204 /* String.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +30,10 @@
 		1E102B111929B89300B623B9 /* sorter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = sorter; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E102B141929B89300B623B9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1E102B161929B89300B623B9 /* sorter.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = sorter.1; sourceTree = "<group>"; };
+		1E102B201929C2B800B623B9 /* sorter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sorter.cpp; sourceTree = "<group>"; };
+		1E102B211929C2B800B623B9 /* sorter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sorter.h; sourceTree = "<group>"; };
+		1ED60F931935A8370043E204 /* String.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = String.cpp; sourceTree = "<group>"; };
+		1ED60F941935A8370043E204 /* String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = String.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,10 @@
 			children = (
 				1E102B141929B89300B623B9 /* main.cpp */,
 				1E102B161929B89300B623B9 /* sorter.1 */,
+				1E102B201929C2B800B623B9 /* sorter.cpp */,
+				1E102B211929C2B800B623B9 /* sorter.h */,
+				1ED60F931935A8370043E204 /* String.cpp */,
+				1ED60F941935A8370043E204 /* String.h */,
 			);
 			path = sorter;
 			sourceTree = "<group>";
@@ -118,6 +128,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E102B151929B89300B623B9 /* main.cpp in Sources */,
+				1ED60F951935A8370043E204 /* String.cpp in Sources */,
+				1E102B221929C2B800B623B9 /* sorter.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +239,7 @@
 				1E102B1C1929B89300B623B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
