@@ -69,8 +69,9 @@ T* merge(T* input, int length)
 			}
 		}
         
-		return merged_arr;
-        
+        	std::copy(merged_arr, merged_arr + length, input);
+        	delete[] merged_arr;
+		return input;
 	}
 	else
 	{
