@@ -8,7 +8,35 @@
 
 
 #include "String.h"
+#include <iostream>
 
+using namespace gfurg;
+
+String::String() : arrSize(0)
+{ 
+	value = arrSize ? new char[arrSize]() : 0;
+}
+
+String::String(std::size_t size = 0) : arrSize(size)
+{
+	value = arrSize ? new char[arrSize]() : 0;
+}
+
+String::String(const char* str) : arrSize(strlen(str))
+{
+	value = arrSize ? new char[arrSize]() : 0;
+	std::copy<const char*, char*>(str, str + arrSize, value);
+}
+
+// copy-constructor
+String::String(const String& other) : arrSize(other.arrSize)
+{
+	// note that this is non-throwing, because of the data
+	// types being used; more attention to detail with regards
+	// to exceptions must be given in a more general case, however
+	value = arrSize ? new char[arrSize]() : 0;
+	std::copy<char*, char*>(other.value, other.value + arrSize, value);
+}
 
 int String::length()
 {
@@ -30,14 +58,14 @@ String& String::operator=(const char* str)
 	arrSize = strlen(str);
 	value = arrSize ? new char[arrSize]() : 0;
 	std::copy<const char*, char*>(str, str + arrSize, value);
-    
+
 	return *this;
 }
 
 String& String::operator=(String str)
 {
 	swap(*this, str);
-    
+
 	return *this;
 }
 
@@ -89,16 +117,6 @@ bool String::operator<(String& other)
 		}
 		x++;
 	}
-}
-
-std::ostream& operator<<(std::ostream& os, String& obj)
-{
-    int x = 0;
-    for(x = 0; x < obj.length(); x++)
-    {
-        os.put(obj[x]);
-    }
-    return os;
 }
 
 String::~String()
