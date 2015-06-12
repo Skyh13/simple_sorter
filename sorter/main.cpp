@@ -10,25 +10,33 @@
 #include "sorter.h"
 #include "String.h"
 
+using namespace std;
+using namespace gfurg;
+
 int main(int argc, const char * argv[])
 {
+	gfurg::String input2[] = { "girl", "dog", "boy", "cat" };
 
-    int testArr[] = {5, 3, 7, 2, 0, 4, 6};
-    String testArr2[] = { String("cat"), String("dog"), String("boy"), String("girl") };
-    
-    Sorter sortObj;
-    
-    sortObj.bubbleSort<int>(testArr, 7);
-    
-    sortObj.mergeSort<String>(testArr2, 4);
-    
-    for(int x = 0; x < 4; x++)
-    {
-        std::cout << testArr2[x] << "\n";
-    }
-    
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+	int input[12] = { 5, 3, 8, 2, 6, 3, 9, 1, 3, 2, 7, 5 };
+	int* result;
+	gfurg::String* result2;
+
+	Sorter sortObj;
+
+	sortObj.bubbleSort<int>(input, 12);
+
+	sortObj.mergeSort<String>(input2, 4);
+
+	for (int x = 0; x < 12; x++)
+	{
+		std::cout << input[x] << "\n";
+	}
+
+	for (int x = 0; x < 4; x++)
+	{
+		std::cout << input2[x] << "\n";
+	}
+
+	return 0;
 }
 
